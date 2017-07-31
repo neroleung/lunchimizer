@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lunchimizer</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+
+  <%= javascript_include_tag 'application' %>
+
+  <script>ReactRailsUJS.mountComponents();</script>
+</html>

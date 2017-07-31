@@ -1,0 +1,25 @@
+{
+  "name": "lunchimizer",
+  "version": "1.0.0",
+  "main": "application.js",
+  "repository": "git@github.com:neroleung/lunchimizer.git",
+  "author": "Nero Leung <neroleung@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babelify": "^7.3.0",
+    "bootstrap": "^3.3.7",
+    "browserify": "^14.4.0",
+    "browserify-incremental": "^3.1.1",
+    "jquery": "^3.2.1",
+    "react": "^15.6.1",
+    "react-bootstrap": "^0.31.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.5",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
+  }
+}
