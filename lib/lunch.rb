@@ -1,0 +1,2 @@
+module Lunch
+end
