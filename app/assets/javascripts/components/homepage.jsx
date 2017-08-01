@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux';
 import {FormGroup, ControlLabel, Button} from 'react-bootstrap';
 
 import * as HomepageActions from '../actions/homepage_actions';
+import Navigation from '../components/shared/navigation.jsx';
 
 class Homepage extends React.Component {
   static renderGroup = (group, i) => {
@@ -37,6 +38,8 @@ class Homepage extends React.Component {
 
     return (
       <div className="homepage-container">
+        <Navigation />
+
         <FormGroup validationState={apiResponse.validationState}>
           <Button bsStyle="primary"
                   onClick={homepageActions.fetchLunchGroups}>

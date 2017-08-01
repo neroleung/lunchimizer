@@ -3,6 +3,7 @@ import {bindActionCreators} from 'redux';
 import {FormGroup, ControlLabel, FormControl, Button} from 'react-bootstrap';
 
 import * as UserActions from '../actions/user_actions';
+import Navigation from '../components/shared/navigation.jsx';
 
 class CreateUserForm extends React.Component {
   constructor(props, context) {
@@ -19,26 +20,30 @@ class CreateUserForm extends React.Component {
     const {user, userActions, apiResponse} = this.props;
 
     return (
-      <FormGroup validationState={apiResponse.validationState}>
-        <ControlLabel>Enter name for new user</ControlLabel>
+      <div className="users-new-container">
+        <Navigation />
 
-        <FormControl type="text"
-                     value={user.name}
-                     placeholder="Enter name"
-                     onChange={userActions.setUserName}
-                     onKeyPress={this.__handleKeyPress.bind(this)}/>
+        <FormGroup validationState={apiResponse.validationState}>
+          <ControlLabel>Enter name for new user</ControlLabel>
 
-        <br />
+          <FormControl type="text"
+                       value={user.name}
+                       placeholder="Enter name"
+                       onChange={userActions.setUserName}
+                       onKeyPress={this.__handleKeyPress.bind(this)}/>
 
-        <Button bsStyle="primary"
-                onClick={userActions.createUser}>
-          Add
-        </Button>
+          <br />
 
-        <br />
+          <Button bsStyle="primary"
+                  onClick={userActions.createUser}>
+            Add
+          </Button>
 
-        <ControlLabel className="api-response-message">{apiResponse.message}</ControlLabel>
-      </FormGroup>
+          <br />
+
+          <ControlLabel className="api-response-message">{apiResponse.message}</ControlLabel>
+        </FormGroup>
+      </div>
     );
   }
 }
