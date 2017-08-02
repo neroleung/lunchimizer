@@ -40,18 +40,20 @@ class Homepage extends React.Component {
       <div className="homepage-container">
         <Navigation />
 
-        <FormGroup validationState={apiResponse.validationState}>
-          <Button bsStyle="primary"
-                  onClick={homepageActions.fetchLunchGroups}>
-            Generate lunch groups
-          </Button>
+        <div className="content">
+          <FormGroup validationState={apiResponse.validationState}>
+            <Button bsStyle="primary"
+                    onClick={homepageActions.fetchLunchGroups}>
+              Generate lunch groups
+            </Button>
 
-          <br />
+            <br />
 
-          <ControlLabel className="api-response-message">{apiResponse.message}</ControlLabel>
-        </FormGroup>
+            <ControlLabel className="api-response-message">{apiResponse.message}</ControlLabel>
+          </FormGroup>
 
-        {this.__renderGroups()}
+          {this.__renderGroups()}
+        </div>
       </div>
     );
   }

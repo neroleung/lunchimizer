@@ -23,26 +23,28 @@ class CreateUserForm extends React.Component {
       <div className="users-new-container">
         <Navigation />
 
-        <FormGroup validationState={apiResponse.validationState}>
-          <ControlLabel>Enter name for new user</ControlLabel>
+        <div className="content">
+          <FormGroup validationState={apiResponse.validationState}>
+            <ControlLabel>Enter name for new user</ControlLabel>
 
-          <FormControl type="text"
-                       value={user.name}
-                       placeholder="Enter name"
-                       onChange={userActions.setUserName}
-                       onKeyPress={this.__handleKeyPress.bind(this)}/>
+            <FormControl type="text"
+                         value={user.name}
+                         placeholder="Enter name"
+                         onChange={userActions.setUserName}
+                         onKeyPress={this.__handleKeyPress.bind(this)}/>
 
-          <br />
+            <br />
 
-          <Button bsStyle="primary"
-                  onClick={userActions.createUser}>
-            Add
-          </Button>
+            <Button bsStyle="primary"
+                    onClick={userActions.createUser}>
+              Add
+            </Button>
 
-          <br />
+            <br />
 
-          <ControlLabel className="api-response-message">{apiResponse.message}</ControlLabel>
-        </FormGroup>
+            <ControlLabel className="api-response-message">{apiResponse.message}</ControlLabel>
+          </FormGroup>
+        </div>
       </div>
     );
   }
