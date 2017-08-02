@@ -20,3 +20,7 @@
 1. For XCode 8, `vim /usr/local/Cellar/qt@5.5/5.5.1_1/mkspecs/features/mac/default_pre.prf`, then replace the line according to https://stackoverflow.com/questions/39492617/xcode-8-error-project-error-xcode-not-set-up-properly-even-though-the-licens
 1. `rake db:setup && rake db:migrate`
 1. `rails s` 
+
+## Screenshot
+
+![Screenshot](/docs/screenshot.png)
